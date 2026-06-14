@@ -488,7 +488,7 @@ with tab1:
         fig, ax = plt.subplots(figsize=(6, 4))
         data_by_need = [df_raw[df_raw['Irrigation_Need'] == n]['Soil_Moisture'].values
                         for n in ['Low', 'Medium', 'High']]
-        bp = ax.boxplot(data_by_need, labels=['Low', 'Medium', 'High'],
+        bp = ax.boxplot(data_by_need, tick_labels=['Low', 'Medium', 'High'],
                         patch_artist=True, notch=False,
                         medianprops=dict(color='white', linewidth=2))
         for patch, color in zip(bp['boxes'], BLUE_PALETTE[:3]):
